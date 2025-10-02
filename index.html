@@ -1,1 +1,562 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitLife Academy - Sua Jornada Fitness</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            box-sizing: border-box;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .video-container {
+            position: relative;
+            width: 100%;
+            height: 0;
+            padding-bottom: 56.25%;
+            background: #1f2937;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .video-placeholder {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg text-white shadow-lg">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                        <span class="text-purple-600 font-bold text-xl">💪</span>
+                    </div>
+                    <h1 class="text-2xl font-bold">FitLife Academy</h1>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="nav-link hover:text-purple-200">Início</a>
+                    <a href="#videos" class="nav-link hover:text-purple-200">Vídeos</a>
+                    <a href="#treinos" class="nav-link hover:text-purple-200">Treinos</a>
+                    <a href="#calculadora" class="nav-link hover:text-purple-200">Calculadora IMC</a>
+                    <a href="#dietas" class="nav-link hover:text-purple-200">Dietas</a>
+                    <a href="#planos" class="nav-link hover:text-purple-200">Planos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-5xl font-bold mb-6">Transforme Sua Vida</h2>
+            <p class="text-xl mb-8 max-w-2xl mx-auto">Descubra o melhor de você com nossos treinos personalizados, dietas balanceadas e acompanhamento profissional.</p>
+            <button class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">
+                Comece Agora
+            </button>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section id="videos" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Vídeos de Treino</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="text-6xl mb-4">▶️</div>
+                            <h3 class="text-lg font-semibold">Treino de Peito</h3>
+                            <p class="text-sm opacity-75">15 minutos</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Treino Completo de Peito</h3>
+                        <p class="text-gray-600">Exercícios focados no desenvolvimento do peitoral com técnicas avançadas.</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="text-6xl mb-4">▶️</div>
+                            <h3 class="text-lg font-semibold">Cardio HIIT</h3>
+                            <p class="text-sm opacity-75">20 minutos</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">HIIT Queima Gordura</h3>
+                        <p class="text-gray-600">Treino intervalado de alta intensidade para máxima queima calórica.</p>
+                    </div>
+                </div>
+                
+                <div class="card-hover bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="video-container">
+                        <div class="video-placeholder">
+                            <div class="text-6xl mb-4">▶️</div>
+                            <h3 class="text-lg font-semibold">Yoga Relaxante</h3>
+                            <p class="text-sm opacity-75">30 minutos</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Yoga para Iniciantes</h3>
+                        <p class="text-gray-600">Sequência relaxante para flexibilidade e bem-estar mental.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Treinos Section -->
+    <section id="treinos" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Planos de Treino</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6">
+                    <div class="text-4xl mb-4">🏋️‍♂️</div>
+                    <h3 class="text-xl font-semibold mb-4">Iniciante</h3>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li>• 3x por semana</li>
+                        <li>• Exercícios básicos</li>
+                        <li>• Foco na técnica</li>
+                        <li>• Acompanhamento inicial</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition duration-300">
+                        Ver Treino
+                    </button>
+                </div>
+                
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6">
+                    <div class="text-4xl mb-4">💪</div>
+                    <h3 class="text-xl font-semibold mb-4">Intermediário</h3>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li>• 4-5x por semana</li>
+                        <li>• Exercícios compostos</li>
+                        <li>• Progressão de carga</li>
+                        <li>• Variações avançadas</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition duration-300">
+                        Ver Treino
+                    </button>
+                </div>
+                
+                <div class="card-hover bg-white rounded-lg shadow-lg p-6">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="text-xl font-semibold mb-4">Avançado</h3>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li>• 6x por semana</li>
+                        <li>• Técnicas intensas</li>
+                        <li>• Periodização</li>
+                        <li>• Competição prep</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-2 rounded-lg hover:bg-purple-700 transition duration-300">
+                        Ver Treino
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora IMC -->
+    <section id="calculadora" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Calculadora de IMC</h2>
+            <div class="max-w-md mx-auto bg-white rounded-lg shadow-lg p-8">
+                <form id="imcForm" class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Peso (kg)</label>
+                        <input type="number" id="peso" step="0.1" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Ex: 70.5" required>
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Altura (m)</label>
+                        <input type="number" id="altura" step="0.01" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="Ex: 1.75" required>
+                    </div>
+                    <button type="submit" class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300">
+                        Calcular IMC
+                    </button>
+                </form>
+                <div id="resultadoIMC" class="mt-6 p-4 rounded-lg hidden">
+                    <h3 class="font-semibold text-lg mb-2">Seu IMC:</h3>
+                    <div id="valorIMC" class="text-2xl font-bold mb-2"></div>
+                    <div id="classificacaoIMC" class="text-lg"></div>
+                    <div id="dicaIMC" class="text-sm text-gray-600 mt-2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dietas Section -->
+    <section id="dietas" class="py-16 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Dietas Personalizadas</h2>
+            
+            <!-- Seletor de Objetivo -->
+            <div class="max-w-2xl mx-auto mb-8">
+                <label class="block text-gray-700 font-semibold mb-4 text-center">Selecione seu objetivo:</label>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button onclick="mostrarDieta('perda')" class="objetivo-btn bg-red-500 text-white px-6 py-2 rounded-full hover:bg-red-600 transition duration-300">
+                        Perda de Peso
+                    </button>
+                    <button onclick="mostrarDieta('ganho')" class="objetivo-btn bg-green-500 text-white px-6 py-2 rounded-full hover:bg-green-600 transition duration-300">
+                        Ganho de Massa
+                    </button>
+                    <button onclick="mostrarDieta('manutencao')" class="objetivo-btn bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300">
+                        Manutenção
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tabelas de Dieta -->
+            <div id="dietaPerda" class="dieta-tabela hidden">
+                <h3 class="text-2xl font-semibold text-center mb-6 text-red-600">Dieta para Perda de Peso</h3>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-red-500 text-white">
+                            <tr>
+                                <th class="px-6 py-3 text-left">Refeição</th>
+                                <th class="px-6 py-3 text-left">Alimentos</th>
+                                <th class="px-6 py-3 text-left">Calorias</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Café da Manhã</td>
+                                <td class="px-6 py-4">2 ovos + 1 fatia de pão integral + 1 fruta</td>
+                                <td class="px-6 py-4">350 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Lanche</td>
+                                <td class="px-6 py-4">1 iogurte natural + castanhas</td>
+                                <td class="px-6 py-4">200 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Almoço</td>
+                                <td class="px-6 py-4">Peito de frango + salada + arroz integral</td>
+                                <td class="px-6 py-4">450 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Lanche</td>
+                                <td class="px-6 py-4">Shake de proteína + 1 banana</td>
+                                <td class="px-6 py-4">250 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Jantar</td>
+                                <td class="px-6 py-4">Peixe grelhado + legumes + batata doce</td>
+                                <td class="px-6 py-4">400 kcal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center mt-4 text-gray-600"><strong>Total: 1.650 kcal/dia</strong></p>
+            </div>
+
+            <div id="dietaGanho" class="dieta-tabela hidden">
+                <h3 class="text-2xl font-semibold text-center mb-6 text-green-600">Dieta para Ganho de Massa</h3>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-green-500 text-white">
+                            <tr>
+                                <th class="px-6 py-3 text-left">Refeição</th>
+                                <th class="px-6 py-3 text-left">Alimentos</th>
+                                <th class="px-6 py-3 text-left">Calorias</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Café da Manhã</td>
+                                <td class="px-6 py-4">3 ovos + aveia + banana + leite</td>
+                                <td class="px-6 py-4">550 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Lanche</td>
+                                <td class="px-6 py-4">Sanduíche de peito de peru + suco</td>
+                                <td class="px-6 py-4">400 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Almoço</td>
+                                <td class="px-6 py-4">Carne vermelha + arroz + feijão + salada</td>
+                                <td class="px-6 py-4">700 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Lanche</td>
+                                <td class="px-6 py-4">Whey protein + aveia + frutas</td>
+                                <td class="px-6 py-4">450 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Jantar</td>
+                                <td class="px-6 py-4">Frango + macarrão + legumes</td>
+                                <td class="px-6 py-4">600 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Ceia</td>
+                                <td class="px-6 py-4">Caseína + oleaginosas</td>
+                                <td class="px-6 py-4">300 kcal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center mt-4 text-gray-600"><strong>Total: 3.000 kcal/dia</strong></p>
+            </div>
+
+            <div id="dietaManutencao" class="dieta-tabela hidden">
+                <h3 class="text-2xl font-semibold text-center mb-6 text-blue-600">Dieta para Manutenção</h3>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-blue-500 text-white">
+                            <tr>
+                                <th class="px-6 py-3 text-left">Refeição</th>
+                                <th class="px-6 py-3 text-left">Alimentos</th>
+                                <th class="px-6 py-3 text-left">Calorias</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Café da Manhã</td>
+                                <td class="px-6 py-4">2 ovos + pão integral + fruta + café</td>
+                                <td class="px-6 py-4">400 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Lanche</td>
+                                <td class="px-6 py-4">Iogurte + granola + frutas vermelhas</td>
+                                <td class="px-6 py-4">300 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Almoço</td>
+                                <td class="px-6 py-4">Proteína + carboidrato + salada + azeite</td>
+                                <td class="px-6 py-4">600 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Lanche</td>
+                                <td class="px-6 py-4">Vitamina de frutas + aveia</td>
+                                <td class="px-6 py-4">250 kcal</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4 font-semibold">Jantar</td>
+                                <td class="px-6 py-4">Peixe + quinoa + vegetais</td>
+                                <td class="px-6 py-4">500 kcal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-center mt-4 text-gray-600"><strong>Total: 2.050 kcal/dia</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Planos Section -->
+    <section id="planos" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">Nossos Planos</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="card-hover bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4 text-center">Básico</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-purple-600">R$ 49</span>
+                        <span class="text-gray-600">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Acesso aos vídeos</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Treinos básicos</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Calculadora IMC</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dietas padrão</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <div class="card-hover bg-white rounded-lg shadow-lg p-8 border-2 border-purple-500 relative">
+                    <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-purple-500 text-white px-4 py-1 rounded-full text-sm">
+                        Mais Popular
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-center">Premium</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-purple-600">R$ 99</span>
+                        <span class="text-gray-600">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Tudo do Básico</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Treinos personalizados</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Dietas personalizadas</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Suporte por chat</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Acompanhamento mensal</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <div class="card-hover bg-white rounded-lg shadow-lg p-8 border-2 border-gray-200">
+                    <h3 class="text-2xl font-bold mb-4 text-center">VIP</h3>
+                    <div class="text-center mb-6">
+                        <span class="text-4xl font-bold text-purple-600">R$ 199</span>
+                        <span class="text-gray-600">/mês</span>
+                    </div>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Tudo do Premium</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Personal trainer online</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Nutricionista dedicado</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Suporte 24/7</li>
+                        <li class="flex items-center"><span class="text-green-500 mr-2">✓</span> Consultoria semanal</li>
+                    </ul>
+                    <button class="w-full bg-purple-600 text-white py-3 rounded-lg font-semibold hover:bg-purple-700 transition duration-300">
+                        Escolher Plano
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">FitLife Academy</h3>
+                    <p class="text-gray-400">Transformando vidas através do fitness e bem-estar.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white">Início</a></li>
+                        <li><a href="#treinos" class="hover:text-white">Treinos</a></li>
+                        <li><a href="#dietas" class="hover:text-white">Dietas</a></li>
+                        <li><a href="#planos" class="hover:text-white">Planos</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li>📧 contato@fitlife.com</li>
+                        <li>📱 (11) 99999-9999</li>
+                        <li>📍 São Paulo, SP</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Redes Sociais</h4>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">📘 Facebook</a>
+                        <a href="#" class="text-gray-400 hover:text-white">📷 Instagram</a>
+                        <a href="#" class="text-gray-400 hover:text-white">🐦 Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 FitLife Academy. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Calculadora de IMC
+        document.getElementById('imcForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const peso = parseFloat(document.getElementById('peso').value);
+            const altura = parseFloat(document.getElementById('altura').value);
+            
+            if (peso && altura) {
+                const imc = peso / (altura * altura);
+                const resultado = document.getElementById('resultadoIMC');
+                const valorIMC = document.getElementById('valorIMC');
+                const classificacaoIMC = document.getElementById('classificacaoIMC');
+                const dicaIMC = document.getElementById('dicaIMC');
+                
+                valorIMC.textContent = imc.toFixed(1);
+                
+                let classificacao, cor, dica;
+                
+                if (imc < 18.5) {
+                    classificacao = 'Abaixo do peso';
+                    cor = 'text-blue-600';
+                    dica = 'Considere ganhar peso de forma saudável com acompanhamento nutricional.';
+                } else if (imc < 25) {
+                    classificacao = 'Peso normal';
+                    cor = 'text-green-600';
+                    dica = 'Parabéns! Mantenha seus hábitos saudáveis.';
+                } else if (imc < 30) {
+                    classificacao = 'Sobrepeso';
+                    cor = 'text-yellow-600';
+                    dica = 'Considere uma dieta balanceada e exercícios regulares.';
+                } else {
+                    classificacao = 'Obesidade';
+                    cor = 'text-red-600';
+                    dica = 'Recomendamos acompanhamento médico e nutricional.';
+                }
+                
+                classificacaoIMC.textContent = classificacao;
+                classificacaoIMC.className = `text-lg font-semibold ${cor}`;
+                dicaIMC.textContent = dica;
+                
+                resultado.className = 'mt-6 p-4 rounded-lg bg-gray-50 border';
+                resultado.classList.remove('hidden');
+            }
+        });
+
+        // Função para mostrar dietas
+        function mostrarDieta(tipo) {
+            // Esconder todas as dietas
+            document.querySelectorAll('.dieta-tabela').forEach(tabela => {
+                tabela.classList.add('hidden');
+            });
+            
+            // Resetar botões
+            document.querySelectorAll('.objetivo-btn').forEach(btn => {
+                btn.classList.remove('ring-4', 'ring-opacity-50');
+            });
+            
+            // Mostrar dieta selecionada
+            document.getElementById(`dieta${tipo.charAt(0).toUpperCase() + tipo.slice(1)}`).classList.remove('hidden');
+            
+            // Destacar botão ativo
+            event.target.classList.add('ring-4', 'ring-opacity-50');
+        }
+
+        // Navegação suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Mostrar primeira dieta por padrão
+        window.addEventListener('load', function() {
+            setTimeout(() => {
+                const primeiroBtn = document.querySelector('.objetivo-btn');
+                if (primeiroBtn) {
+                    primeiroBtn.click();
+                }
+            }, 100);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'988404ebf7d0f18b',t:'MTc1OTQwNjIxNS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
 
